@@ -30,7 +30,7 @@ if (isset($data["addNoteDb"])){
   ?>
   <div class="notePage">
     <h1 id="h1Page"><?=$row['title']?></h1>
-    <img id='imgPage' src="http://localhost/mangodev/img/<?=$row['img']?>">
+    <img id='imgPage' src="/img/<?=$row['img']?>">
     <p id='textPage'><?=$row['text']?></p>
     <div class="divPage">
       <p id='datePage'>Date of publication: <?=$row['date']?></p>
