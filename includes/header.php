@@ -16,15 +16,15 @@
 <body>
   <header>
     <img src="img/mango.png" id="imgLogo">
-    <a href="<?php dirname(__DIR__) ?>/mangodev" id="titleLogo"><?=$tittle?></a>
+    <a href="/" id="titleLogo"><?=$tittle?></a>
     <nav>
       <div>
         <?php if( isset($_SESSION['logged_user']) ) : ?>
-          <?php if('/mangodev/index.php' == $_SERVER['REQUEST_URI'] || '/mangodev/' == $_SERVER['REQUEST_URI']) : ?>
+          <?php if('/index.php' == $_SERVER['REQUEST_URI'] || '/' == $_SERVER['REQUEST_URI']) : ?>
               <p id="welcomeText">Hello, <?php echo $_SESSION['logged_user']->login; ?>!</p>
               <a href="addnote.php">Add note</a>
             <?php else : ?>
-              <a href="<?php dirname(__DIR__) ?>/mangodev">Home</a>
+              <a href="/">Home</a>
             <?php endif; ?>
           <a href="logout.php">Logout</a>
         <?php else : ?>

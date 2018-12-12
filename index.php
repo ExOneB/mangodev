@@ -12,7 +12,7 @@ $query = R::getAll( "SELECT * FROM notes ORDER BY id DESC LIMIT $start, $count" 
   <br>
     <div class="noteOne">
       <p class="textDate"><?=$row['date']?></p>
-      <img src="http://localhost/mangodev/img/<?=$row['img']?>">
+      <img src="/img/<?=$row['img']?>">
         <div class="noteText">
           <a href="page.php?id=<?=$row['id']?>" id="h1"><h1><?=$row['title']?></h1></a>
           <p><?=$row['text']?></p>
