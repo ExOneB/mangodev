@@ -17,7 +17,8 @@ if (isset($data["addNoteDb"])){
     $notes->date = $data['date'];
     if ($_FILES['imageForm']) {
     $path = '/mangodev/img/';
-    $ext = array_pop(explode('.',$_FILES['imageForm']['name']));
+    $exts = explode('.',$_FILES['imageForm']['name']);
+    $ext = strtolower(array_pop($exts));
     $new_name = time().'.'.$ext;
     $full_path = dirname(__DIR__).$path.$new_name;
     if($_FILES['imageForm']['error'] == 0){
